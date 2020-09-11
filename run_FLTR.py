@@ -64,8 +64,8 @@ flags.DEFINE_integer(
 
 
 flags.DEFINE_bool(
-    "do_predict", False,
-    "Whether to run the model in inference mode on the test set."
+    "do_predict", True,
+    "Whether to predict FLTR scores for each review."
 )
 
 flags.DEFINE_integer(
