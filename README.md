@@ -1,4 +1,3 @@
-# ecml_pqa
 This repository holds data and source code for ECML-PKDD 2020 paper titled: 
 Less is More: Rejecting Unreliable Reviews for Product Question Answering (https://arxiv.org/abs/2007.04526)
 
