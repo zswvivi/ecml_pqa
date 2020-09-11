@@ -337,7 +337,7 @@ def main(_):
                                                  tokenizer)
    
 
-    OUTPUT_DIR = os.path.join(FLAGS.model_output_dir,FLAGS.category_name+'_FLTR)
+    OUTPUT_DIR = os.path.join(FLAGS.model_output_dir,FLAGS.category_name+'_FLTR')
     tf.gfile.MakeDirs(OUTPUT_DIR)
     
     run_config = tf.estimator.RunConfig(
