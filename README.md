@@ -1,5 +1,6 @@
 This repository holds data and source code for ECML-PKDD 2020 paper titled: 
-# Less is More: Rejecting Unreliable Reviews for Product Question Answering (https://arxiv.org/abs/2007.04526)
+# Less is More: Rejecting Unreliable Reviews for Product Question Answering 
+Paper link (https://arxiv.org/abs/2007.04526)
 
 # Deep Learning Packages Requirements
 - python3.6
