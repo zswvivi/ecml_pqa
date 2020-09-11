@@ -79,7 +79,9 @@ flags.DEFINE_bool(
 
 flags.DEFINE_integer(
     "train_batch_size", 180, 
-    "Total batch size for training."
+    "Total batch size for training, has to be 30*n, n is the number of questions per batch."
+    "e.g. 180 equals 6 questions, each question has 30 paris ( 30*6=180 )" 
+    "30 pairs include 10 Question/Reviews, 10 answer/reviews and 10 non-answer/reviews."
 )
 
 
