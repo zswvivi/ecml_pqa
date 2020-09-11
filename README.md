@@ -6,7 +6,7 @@ This repository holds data and source code for our ECML-PKDD 2020 paper titled:
 - python3.6
 - tensorflow-gpu 1.11
 
-(Note: We use the the Bert model and pretrained Bert weights [BERT-Base, Uncased: 12-layer, 768-hidden, 12-heads, 110M parameters](https://github.com/google-research/bert))
+(Note: We use the the [Bert](https://github.com/google-research/bert) and pretrained Bert weights [BERT-Base, Uncased: 12-layer, 768-hidden, 12-heads, 110M parameters](https://storage.googleapis.com/bert_models/2018_10_18/uncased_L-12_H-768_A-12.zip))
 
 # Data
 1. The PQA dataset (including reviews and QA data) are provided by [dataset link](http://cseweb.ucsd.edu/~jmcauley/datasets.html).
