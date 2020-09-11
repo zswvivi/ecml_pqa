@@ -9,7 +9,7 @@ This repository holds data and source code for our ECML-PKDD 2020 paper titled:
 (Note: We use the [Bert Model](https://github.com/google-research/bert) and pretrained Bert weights [BERT-Base, Uncased: 12-layer, 768-hidden, 12-heads, 110M parameters](https://storage.googleapis.com/bert_models/2018_10_18/uncased_L-12_H-768_A-12.zip))
 
 # Data
-1. The PQA dataset (including reviews and QA data) are provided by [dataset link](http://cseweb.ucsd.edu/~jmcauley/datasets.html).
+1. The Amazon PQA dataset (including reviews and QA data) are provided by [dataset link](http://cseweb.ucsd.edu/~jmcauley/datasets.html).
 2. In this work, we tested our models on data in the following four categories, namely Tools_and_Home_Improvement, Patio_Lawn_and_Garden, Electroincis and Baby.
 3. We released our annotated data which have 200 questions and 4k reviews, in data folder.
 
