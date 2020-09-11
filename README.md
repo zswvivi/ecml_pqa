@@ -14,7 +14,7 @@ This repository holds data and source code for our ECML-PKDD 2020 paper titled:
 3. We released our annotated data which have 200 questions and 4k reviews, located in data folder.
 
 
-# Environment Varibles
+# Environment Variables
 1. export DATA_DIR=/path/to/data
 2. export MODEL_DIR=/path/for/keeping/trained/models
 3. export BERT_DIR=/path/to/bert/uncased_L-12_H-768_A-12
