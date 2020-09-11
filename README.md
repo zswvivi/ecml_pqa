@@ -1,12 +1,12 @@
 This repository holds data and source code for our ECML-PKDD 2020 paper titled: 
 # Less is More: Rejecting Unreliable Reviews for Product Question Answering 
-Paper link (https://arxiv.org/abs/2007.04526)
+[Paper link](https://arxiv.org/abs/2007.04526)
 
 # Deep Learning Packages Requirements
 - python3.6
 - tensorflow-gpu 1.11
 
-(Note: We use the the Bert model and pretrained Bert weights (BERT-Base, Uncased: 12-layer, 768-hidden, 12-heads, 110M parameters) (https://github.com/google-research/bert))
+(Note: We use the the Bert model and pretrained Bert weights [BERT-Base, Uncased: 12-layer, 768-hidden, 12-heads, 110M parameters](https://github.com/google-research/bert))
 
 # Data
 1. The PQA dataset (including reviews and QA data) are provided by [dataset link](http://cseweb.ucsd.edu/~jmcauley/datasets.html).
