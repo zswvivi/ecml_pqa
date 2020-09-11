@@ -23,17 +23,21 @@ This repository holds data and source code for our ECML-PKDD 2020 paper titled:
 python run_preproceesing_data.py --data_dir=$DATA_DIR 
 
 # FLTR Training 
-1. Cross-domian pretraining:  
+1. Cross-domian pretraining:
+
 python run_FLTR.py --data_dir=$DATA_DIR --model_output_dir=$MODEL_DIR --init_checkpoint=$BERT_DIR/bert_model.ckpt --bert_config_file=$BERT_DIR/bert_config.json --vocab_file=$BERT_DIR/vocab.txt --category_name="All_Categories"
 
 2. Training on each category, e.g. 'Baby':
+
 python run_FLTR.py --data_dir=$DATA_DIR --do_predict=True --model_output_dir=$MODEL_DIR --init_checkpoint=$MODEL_DIR /All_Categories_FLTR --bert_config_file=$BERT_DIR/bert_config.json --vocab_file=$BERT_DIR/vocab.txt --category_name="Baby"
 
 # BertQA Training
-1. Cross-domian pretraining: 
+1. Cross-domian pretraining:
+
 python run_BertQA.py --data_dir=$DATA_DIR --model_output_dir=$MODEL_DIR --init_checkpoint=$BERT_DIR/bert_model.ckpt --bert_config_file=$BERT_DIR/bert_config.json --vocab_file=$BERT_DIR/vocab.txt --category_name="All_Categories"
 
 2. Training on each category, e.g. 'Baby': 
+
 python run_BertQA.py --data_dir=$DATA_DIR --model_output_dir=$MODEL_DIR --init_checkpoint=$MODEL_DIR /All_Categories_BertQA --bert_config_file=$BERT_DIR/bert_config.json --vocab_file=$BERT_DIR/vocab.txt --category_name="Baby"
 
 # Predict annotated data (test data) using both trained FLTR and BertQA
