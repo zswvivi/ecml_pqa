@@ -80,7 +80,7 @@ flags.DEFINE_float(
 )
 
 flags.DEFINE_float(
-    "num_train_epochs", 3.0,
+    "num_train_epochs", 8.0,
     "Total number of training epochs to perform."
 )
 
@@ -273,7 +273,7 @@ def main(_):
     if FLAGS.category_name == "All_Categories":
         for category in categories:
             category_data_path = os.path.join(FLAGS.data_dir,category+'.txt')
-            category_data = pd.read_csv(category_data_path,sep='\t',encoding='utf-8',nrows=5000,
+            category_data = pd.read_csv(category_data_path,sep='\t',encoding='utf-8',#nrows=5000,
                   converters={'QA':ast.literal_eval,'reviewText':ast.literal_eval})
             if data is None:
                 data = category_data
