@@ -64,7 +64,7 @@ flags.DEFINE_integer(
 
 
 flags.DEFINE_bool(
-    "do_predict", True,
+    "do_predict", False,
     "Whether to predict FLTR scores for each review."
 )
 
