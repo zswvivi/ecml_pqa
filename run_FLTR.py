@@ -269,17 +269,19 @@ def main(_):
     
     data = None
     
-    """Cross-domain pre-training (All_Categories) boost the performance."""
     if FLAGS.category_name == "All_Categories":
+        """Cross-domain pre-training (All_Categories)."""
         for category in categories:
             category_data_path = os.path.join(FLAGS.data_dir,category+'.txt')
             category_data = pd.read_csv(category_data_path,sep='\t',encoding='utf-8',#nrows=5000,
                   converters={'QA':ast.literal_eval,'reviewText':ast.literal_eval})
+            
+            category_data = category_data[:int(len(data)*0.8)]
             if data is None:
                 data = category_data
             else:
                 data = pd.concat([data,category_data],axis=0)
-        data = data.sample(n=len(data))
+        data = data.sample(n=min(len(data),60000))
     else:
         data_path = os.path.join(FLAGS.data_dir,FLAGS.category_name+'.txt')
         data = pd.read_csv(data_path,sep='\t',encoding='utf-8',#nrows=10000,
