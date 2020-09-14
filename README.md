@@ -32,7 +32,7 @@ The higher score means more possible to be the correct answer.
 The loss function is actually a margin loss, where we maxmize the distance of score of correct answer and non-answer.
 As you see from BertQA model, the input size is massive. It is impossible to fit all of reviews into the model.
 What we do here is to filter reviews. In practice, we choose to use the top 10 reivews ranked by FLTR.
-Even top 10 reviews are still a large input, sice 10 reviews will be paired with question, answer and non-answer, so 30 pairs.
+Even top 10 reviews are still a large input, since 10 reviews will be paired with question, answer and non-answer, so 30 pairs.
 As you know, BERT is a massive model, we are not allowed to have a big batch size for training because of GPU memory.
 In practice, we can only have 6 questions per batch, 6 questions will be 180 pairs (30*6), and our GPU is Nvidia V100.
 
