@@ -1,7 +1,7 @@
 This repository holds data and source code for our ECML-PKDD 2020 paper titled: 
 # Less is More: Rejecting Unreliable Reviews for Product Question Answering 
-[Paper link](https://arxiv.org/abs/2007.04526)
-
+[Paper](https://arxiv.org/abs/2007.04526)
+[Slides](https://github.com/zswvivi/ecml_pqa/blob/master/figures/ppt.pdf)
 
 # Deep Learning Packages Requirements
 - python3.6
@@ -61,3 +61,17 @@ python predict_test_data.py --data_dir=$DATA_DIR  --model_output_dir=$MODEL_DIR 
 
 # Run rejection framework
 python run_rejection_framework.py --data_dir=$DATA_DIR 
+
+# Reading annotated data
+[Annotated_Data](https://github.com/zswvivi/ecml_pqa/blob/master/data/Annotated_Data.txt) <br>
+import pandas as pd <br>
+import ast <br>
+data = pd.read_csv('Annotated_Data.txt',sep='\t',
+                   converters={'annotation_score':ast.literal_eval,
+                               'reviews':ast.literal_eval}) 
+<br>                               
+Each review is annotated by three annotators, such as [1,0,3], you can take the average as the final score. <br>
+Annotation Screeshoot:
+![alt text](https://github.com/zswvivi/ecml_pqa/blob/master/figures/annotation.png)
+
+            
