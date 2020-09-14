@@ -2,6 +2,7 @@ This repository holds data and source code for our ECML-PKDD 2020 paper titled:
 # Less is More: Rejecting Unreliable Reviews for Product Question Answering 
 [Paper link](https://arxiv.org/abs/2007.04526)
 
+
 # Deep Learning Packages Requirements
 - python3.6
 - tensorflow-gpu 1.11
@@ -21,6 +22,21 @@ This repository holds data and source code for our ECML-PKDD 2020 paper titled:
 
 # Dataset preprocessing
 python run_preproceesing_data.py --data_dir=$DATA_DIR 
+
+# Training PQA Models
+
+1. FTLR is basically a binary classifier, but trained on QA pairs and tested on Question/Reviews pairs.
+2. BertQA is a Mixture-of-Expert based model, which is trying to identify the correct answer. 
+In BertQA, question does not meet answers. Instead, reviews meet question and answers, and then score each answer. 
+The higher score means more possible to be the correct answer.
+The loss function is actually a margin loss, where we maxmize the distance of score of correct answer and non-answer.
+As you see from BertQA model, the input size is massive. It is impossible to fit all of reviews into the model.
+What we do here is to filter reviews. In practice, we choose to use the top 10 reivews ranked by FLTR.
+Even top 10 reviews are still a large input, sice 10 reviews will be paired with question, answer and non-answer, so 30 pairs.
+As you know, BERT is a massive model, we are not allowed to have a big batch size for training because of GPU memory.
+In practice, we can only have 6 questions per batch, 6 questions will be 180 pairs (30*6), and our GPU is Nvidia V100.
+
+![alt text](https://github.com/zswvivi/ecml_pqa/blob/master/figures/PQA_Models.png)
 
 # FLTR Training 
 1. Cross-domian pretraining:
