@@ -71,7 +71,7 @@ data = pd.read_csv('Annotated_Data.txt',sep='\t',
                                'reviews':ast.literal_eval}) 
 <br>                               
 Each review is annotated by three annotators, such as [1,0,3], you can take the average as the final score. <br>
-Annotation Screeshoot:
+ Screeshoot:
 ![alt text](https://github.com/zswvivi/ecml_pqa/blob/master/figures/annotation.png)
 
             
