@@ -75,4 +75,18 @@ Each review is annotated by three annotators, such as [1,0,3], you can take the 
 User Study Interface  Screeshoot:
 ![alt text](https://github.com/zswvivi/ecml_pqa/blob/master/figures/annotation.png)
 
+## Citation
+
+Please cite our paper if you use our model or data in your work:
+
+```bibtex
+@inproceedings{zhang2021less,
+  title={Less is more: Rejecting unreliable reviews for product question answering},
+  author={Zhang, Shiwei and Zhang, Xiuzhen and Lau, Jey Han and Chan, Jeffrey and Paris, Cecile},
+  booktitle={Machine Learning and Knowledge Discovery in Databases: European Conference, ECML PKDD 2020, Ghent, Belgium, September 14--18, 2020, Proceedings, Part III},
+  pages={567--583},
+  year={2021},
+  organization={Springer}
+}
+```
             
